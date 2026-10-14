@@ -1,0 +1,101 @@
+:root {
+  --bg: #06070b;
+  --ink: #f4f6f8;
+  --muted: #c5ccd6;
+  --faint: #aeb6c2;
+  --line: rgba(244, 246, 248, 0.12);
+  --line-strong: rgba(244, 246, 248, 0.24);
+  --blue: #3d7eff;
+  --blue-soft: rgba(61, 126, 255, 0.16);
+  --focus: #9dbbff;
+  --ivory: #f4f6f8;
+  --serif: 'Cormorant Garamond', 'Palatino Linotype', Palatino, Georgia, serif;
+  --sans: 'Manrope', 'Segoe UI', sans-serif;
+  color-scheme: dark;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--bg);
+  overflow-x: clip;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgba(61, 126, 255, 0.35);
+  color: #fff;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,26 @@
+.svg {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--ink);
+}
+
+.orbit {
+  transform-box: view-box;
+  transform-origin: center;
+  animation: orbit 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit {
+    animation: none;
+  }
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}

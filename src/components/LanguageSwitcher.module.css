@@ -1,0 +1,30 @@
+.group {
+  display: inline-flex;
+  flex: none;
+  border: 1px solid var(--line);
+  padding: 0.15rem;
+}
+
+.group button {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  border: 0;
+  background: transparent;
+  color: var(--faint);
+  font: inherit;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+}
+
+.group button[aria-pressed='true'] {
+  background: var(--blue-soft);
+  color: var(--ink);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .group button:hover {
+    color: var(--ink);
+  }
+}

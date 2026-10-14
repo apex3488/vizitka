@@ -1,0 +1,51 @@
+.page {
+  --px: 0.78;
+  --py: 0.22;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 100dvh;
+  padding-top: max(clamp(0.75rem, 2vw, 1.35rem), env(safe-area-inset-top));
+  padding-right: max(clamp(0.75rem, 2vw, 1.35rem), env(safe-area-inset-right));
+  padding-bottom: max(clamp(0.75rem, 2vw, 1.35rem), env(safe-area-inset-bottom));
+  padding-left: max(clamp(0.75rem, 2vw, 1.35rem), env(safe-area-inset-left));
+  background: radial-gradient(
+    680px 380px at calc(var(--px) * 100%) calc(var(--py) * 100%),
+    rgba(61, 126, 255, 0.12),
+    transparent 64%
+  );
+}
+
+.frame {
+  width: min(100%, 1120px);
+  min-width: 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 5vw, 3.4rem);
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.028), transparent 12rem);
+  padding: clamp(1.05rem, 3vw, 2.6rem);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.4rem, 6vw, 4rem);
+}
+
+.skip {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 5;
+  transform: translateY(-150%);
+  padding: 0.65rem 0.85rem;
+  background: var(--ivory);
+  color: #12141a;
+  text-decoration: none;
+}
+
+.skip:focus {
+  transform: none;
+}

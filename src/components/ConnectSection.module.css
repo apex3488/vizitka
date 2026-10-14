@@ -1,0 +1,98 @@
+.section {
+  min-width: 0;
+}
+
+.heading {
+  display: flex;
+  align-items: baseline;
+  margin: 0 0 0.9rem;
+  color: var(--faint);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.index {
+  margin-right: 0.75rem;
+  color: var(--blue);
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.layout {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.tap {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.url {
+  max-width: 42rem;
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.url {
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.copy {
+  min-height: 2.75rem;
+  margin-top: 0.35rem;
+  padding: 0.45rem 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+  cursor: pointer;
+}
+
+.status {
+  min-height: 1.25rem;
+  margin: 0.15rem 0 0;
+  color: var(--faint);
+  font-size: 0.85rem;
+}
+
+.qrButton {
+  justify-self: start;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .copy:hover {
+    color: var(--blue);
+  }
+}
+
+@media (min-width: 860px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 2rem;
+  }
+
+  .qrButton {
+    margin-top: 0.15rem;
+  }
+}
+
+@media (max-width: 859px) {
+  .qrButton {
+    order: -1;
+  }
+}

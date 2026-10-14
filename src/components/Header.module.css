@@ -1,0 +1,86 @@
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'logo lang'
+    'kicker kicker';
+  align-items: center;
+  gap: 0.7rem 0.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  grid-area: logo;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+  color: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.word {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.studio {
+  margin-left: 0.45rem;
+  color: var(--faint);
+  font-weight: 500;
+}
+
+.diamond {
+  width: 0.45rem;
+  height: 0.45rem;
+  flex: none;
+  background: var(--blue);
+  transform: rotate(45deg);
+}
+
+.lang {
+  grid-area: lang;
+  justify-self: end;
+}
+
+.kicker {
+  grid-area: kicker;
+  margin: 0;
+  color: var(--faint);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 380px) {
+  .header {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'logo'
+      'lang'
+      'kicker';
+  }
+
+  .lang {
+    justify-self: start;
+  }
+}
+
+@media (min-width: 840px) {
+  .header {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas: 'logo kicker lang';
+  }
+
+  .kicker {
+    justify-self: center;
+    text-align: center;
+  }
+}
