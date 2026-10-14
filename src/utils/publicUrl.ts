@@ -59,7 +59,9 @@ function runtimeCardUrl(): string | null {
 }
 
 export function publicCardUrl(configured: string): string | null {
-  const runtime = runtimeCardUrl()
-  if (runtime) return runtime
-  return usableHttpUrl(configured) ?? usableHttpUrl(import.meta.env.VITE_PUBLIC_URL ?? '')
+  return (
+    usableHttpUrl(configured) ??
+    runtimeCardUrl() ??
+    usableHttpUrl(import.meta.env.VITE_PUBLIC_URL ?? '')
+  )
 }
